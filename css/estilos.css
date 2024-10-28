@@ -1,0 +1,121 @@
+/*Encabezado*/
+div{
+    width: 940px; /*ancho*/
+    position: relative; /*margen en el encabezado*/
+    margin: 0 auto;
+}
+header{
+    background-color: rgb(206, 205, 255); /*fondo del header*/
+    padding: 20px 0;
+    margin: 0 0 20px;
+}
+nav{
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+nav li {
+    display: inline;
+    margin: 0 0 0 1px;
+    padding: 5px;
+}
+nav a {
+    text-transform: uppercase;
+    color: rgba(1, 6, 10, 0.959);
+    font-weight: bold;
+    font-size: 22 px;
+    text-decoration: none;
+}
+nav a:hover{ /*modificar cuando el mouse pasa por un link del menu*/
+    color: blue;
+    text-decoration:underline;
+}
+/*nav a:visited{
+    color: #2e2e2e;
+    background-color:transparent;
+    text-decoration: none;
+}*/
+.logo{
+    margin-left: -20%;
+    width: 40px;
+    height: 40px;
+}
+.mascota li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 20px 18px;
+    box-sizing: border-box;
+}
+.tm {
+    width: 200px;
+    height: 200px;
+}
+.genero {
+    font-size: 18px;
+}
+.edad {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.pie{
+    color: rgba(15, 15, 15, 0.808);
+    font-size: 20px;
+    margin: 20px;
+    font-weight: bold;
+}
+footer{
+    text-align: center;
+    background-color: rgba(206, 205, 255); 
+    padding: 20px;
+}
+.giff{
+    width: 560px;
+    margin: 1em auto;
+    align-self:center;
+
+}
+body{
+    background-color: #f1f1f1;
+}
+#Bienvenidos h2{ 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Bienvenidos p{ 
+    text-align: justify;
+    padding: 20px;
+    box-shadow: 0px 2px 2px 3px rgba(118, 117, 117, 0.5) ;
+    margin-left: 10px; 
+    margin-right: 10p; 
+    font-size: 23px; 
+    line-height: 1.7em; 
+}
+#blog .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#blog img{ 
+    width: 230px;
+    height: 220px;
+    box-shadow: 0px 0px 2px 5px rgba(126, 146, 95, 0.5);
+}
+
+#blog article{
+    margin: 20px;
+}
+ #blog h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+ }
+ #blog h4{
+    text-align: center;
+    padding: auto;
+    margin-top: 10px;
+ }
