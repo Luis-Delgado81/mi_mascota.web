@@ -62,6 +62,7 @@ nav a:hover{ /*modificar cuando el mouse pasa por un link del menu*/
     margin-top: 10px;
 }
 .pie{
+    text-align: center;
     color: rgba(15, 15, 15, 0.808);
     font-size: 20px;
     margin: 20px;
@@ -118,4 +119,12 @@ body{
     text-align: center;
     padding: auto;
     margin-top: 10px;
+ }
+ /*Alinear texto de nosotros.html*/
+ h1{
+    text-align: center;
+ }
+ p{
+    text-align: justify;
+    font-size: 24px;
  }
