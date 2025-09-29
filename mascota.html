@@ -1,74 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Disponibles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/cargarComponentes.js" defer></script> <!-- Nuevo archivo JS -->
-    <title>Mascota</title>
+    <script src="javascript/cargarComponentes.js" defer></script>
+    <script src="javascript/mascotasDB.js" defer></script>
 </head>
 <body>
-    <header id="header"></header> <!-- El header se cargará aquí -->
+    <header id="header"></header>
 
-    <section>
-        <ul class="mascota">
-            <li>
-                <h2>Labrador Negro</h2>
-                <img class = "tm" src="imagen/Labrador negro.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 1 años</p>
-            </li>
-            <li>
-                <h2>Gatico</h2>
-                <img class = "tm" src="imagen/gatico.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 2 años</p>
-            </li>
-            <li>
-                <h2>Gato</h2>
-                <img class = "tm" src="imagen/gato.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 3 años</p>
-            </li>
-            <li>
-                <h2>Labrador Negro</h2>
-                <img class = "tm" src="imagen/Labrador negro.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 1 años</p>
-            </li>
-            <li>
-                <h2>Gatico</h2>
-                <img class = "tm" src="imagen/gatico.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 2 años</p>
-            </li>
-            <li>
-                <h2>Gato</h2>
-                <img class = "tm" src="imagen/gato.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 3 años</p>
-            </li>
-            <li>
-                <h2>Labrador Negro</h2>
-                <img class = "tm" src="imagen/Labrador negro.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 1 años</p>
-            </li>
-            <li>
-                <h2>Gatico</h2>
-                <img class = "tm" src="imagen/gatico.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 2 años</p>
-            </li>
-            <li>
-                <h2>Gato</h2>
-                <img class = "tm" src="imagen/gato.jpg">
-                <p class="genero">Macho</p>
-                <p class="edad"> 3 años</p>
-            </li>
-        </ul>
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1><i class="fas fa-paw"></i> Nuestras Mascotas Disponibles</h1>
+            <p class="lead">Encuentra a tu compañero perfecto</p>
+        </div>
 
-    </section>
-    <footer id="footer"></footer> <!-- El footer se cargará aquí -->
+        <!-- Filtros de búsqueda -->
+        <div class="row mb-4">
+            <div class="col-lg-10 mx-auto">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="row g-3 align-items-end">
+                            <div class="col-md-4">
+                                <label for="filtroTipo" class="form-label">
+                                    <i class="fas fa-filter"></i> Tipo de Mascota
+                                </label>
+                                <select class="form-select" id="filtroTipo">
+                                    <option value="">Todos</option>
+                                    <option value="perro">Perros</option>
+                                    <option value="gato">Gatos</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="filtroGenero" class="form-label">
+                                    <i class="fas fa-venus-mars"></i> Género
+                                </label>
+                                <select class="form-select" id="filtroGenero">
+                                    <option value="">Todos</option>
+                                    <option value="macho">Macho</option>
+                                    <option value="hembra">Hembra</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary w-100" onclick="aplicarFiltros()">
+                                    <i class="fas fa-search"></i> Buscar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenedor de mascotas (se llena dinámicamente) -->
+        <div class="row g-4" id="contenedorMascotas">
+            <!-- Las mascotas se cargarán aquí desde mascotasDB.js -->
+        </div>
+
+        <!-- Mensaje cuando no hay resultados -->
+        <div id="sinResultados" class="text-center my-5" style="display: none;">
+            <i class="fas fa-search fa-3x text-muted mb-3"></i>
+            <h3>No se encontraron mascotas</h3>
+            <p class="text-muted">Intenta con otros filtros de búsqueda</p>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Función para aplicar filtros
+        function aplicarFiltros() {
+            const filtroTipo = document.getElementById('filtroTipo').value.toLowerCase();
+            const filtroGenero = document.getElementById('filtroGenero').value.toLowerCase();
+            
+            let mascotas = obtenerMascotasDisponibles();
+            
+            // Aplicar filtro de tipo
+            if (filtroTipo) {
+                mascotas = mascotas.filter(m => m.tipo.toLowerCase().includes(filtroTipo));
+            }
+            
+            // Aplicar filtro de género
+            if (filtroGenero) {
+                mascotas = mascotas.filter(m => m.genero.toLowerCase() === filtroGenero);
+            }
+            
+            mostrarMascotas(mascotas);
+        }
+        
+        // Función para mostrar mascotas
+        function mostrarMascotas(mascotas) {
+            const contenedor = document.getElementById('contenedorMascotas');
+            const sinResultados = document.getElementById('sinResultados');
+            
+            if (mascotas.length === 0) {
+                contenedor.innerHTML = '';
+                sinResultados.style.display = 'block';
+                return;
+            }
+            
+            sinResultados.style.display = 'none';
+            contenedor.innerHTML = '';
+            
+            mascotas.forEach(mascota => {
+                const iconoGenero = mascota.genero === 'Macho' 
+                    ? '<i class="fas fa-mars text-primary"></i>' 
+                    : '<i class="fas fa-venus text-danger"></i>';
+                
+                const tarjeta = `
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card mascota-card h-100 shadow-sm">
+                            <img src="${mascota.imagen}" class="card-img-top" alt="${mascota.tipo}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${mascota.nombre}</h5>
+                                <p class="text-muted mb-2">${mascota.tipo}</p>
+                                <p class="card-text">
+                                    ${iconoGenero} <strong>${mascota.genero}</strong><br>
+                                    <i class="fas fa-birthday-cake text-info"></i> <strong>${mascota.edad} año(s)</strong>
+                                </p>
+                                <p class="small text-muted">${mascota.descripcion}</p>
+                                <button class="btn btn-primary btn-sm" onclick="mostrarInteres(${mascota.id})">
+                                    <i class="fas fa-heart"></i> Me interesa
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                contenedor.innerHTML += tarjeta;
+            });
+        }
+        
+        // Cargar todas las mascotas al inicio
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const mascotas = obtenerMascotasDisponibles();
+                mostrarMascotas(mascotas);
+            }, 100);
+        });
+    </script>
 </body>
 </html>

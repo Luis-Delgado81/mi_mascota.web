@@ -1,50 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda de Mascotas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/cargarComponentes.js" defer></script> <!-- Nuevo archivo JS -->
-    <title>Contactos</title>
+    <script src="javascript/cargarComponentes.js" defer></script>
 </head>
 <body>
-    <header id="header"></header> <!-- El header se cargará aquí -->
+    <header id="header"></header>
 
-    <table>
-        <form action="">
-            <tr>
-                <td><label>Nombre:</label></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td><label>Apellidos:</label></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td><label>Telefono:</label></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td><label>Direcciòn:</label></td>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <td><label>Ocupacion:</label></td>
-                <td>
-                    <select name="" id="">
-                        <option value="Estudiante">Estudiante</option>
-                        <option value="Empleado">Empleado</option>
-                        <option value="Desempleado">Desempleado</option>
-                        <option value="Independiente">Independiente</option>
-                    </select>
-                </td>
-            </tr>
-            <br>
-            <tr>
-                <td><input type="submit" value="ENVIA"></td>
-            </tr>
-        </form>
-    </table>
-    <footer id="footer"></footer> <!-- El footer se cargará aquí -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header text-white text-center py-4" style="background-color: rgb(206, 205, 255);">
+                        <h2 class="mb-0 text-dark"><i class="fas fa-envelope"></i> Formulario de Contacto</h2>
+                    </div>
+                    <div class="card-body p-5">
+                        <form id="contactForm" method="POST" action="">
+                            <div class="row g-3">
+                                <!-- Nombre -->
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-bold">
+                                        <i class="fas fa-user"></i> Nombre:
+                                    </label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
+                                </div>
+
+                                <!-- Apellidos -->
+                                <div class="col-md-6">
+                                    <label for="apellidos" class="form-label fw-bold">
+                                        <i class="fas fa-user-tag"></i> Apellidos:
+                                    </label>
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos" required placeholder="Ingrese sus apellidos">
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold">
+                                        <i class="fas fa-envelope"></i> Email:
+                                    </label>
+                                    <input type="email" class="form-control" id="email" name="email" required placeholder="ejemplo@correo.com">
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label fw-bold">
+                                        <i class="fas fa-phone"></i> Teléfono:
+                                    </label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" required placeholder="(123) 456-7890">
+                                </div>
+
+                                <!-- Dirección -->
+                                <div class="col-12">
+                                    <label for="direccion" class="form-label fw-bold">
+                                        <i class="fas fa-map-marker-alt"></i> Dirección:
+                                    </label>
+                                    <input type="text" class="form-control" id="direccion" name="direccion" required placeholder="Ingrese su dirección completa">
+                                </div>
+
+                                <!-- Ocupación -->
+                                <div class="col-md-6">
+                                    <label for="ocupacion" class="form-label fw-bold">
+                                        <i class="fas fa-briefcase"></i> Ocupación:
+                                    </label>
+                                    <select class="form-select" id="ocupacion" name="ocupacion" required>
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="Estudiante">Estudiante</option>
+                                        <option value="Empleado">Empleado</option>
+                                        <option value="Desempleado">Desempleado</option>
+                                        <option value="Independiente">Independiente</option>
+                                    </select>
+                                </div>
+
+                                <!-- Tipo de Mascota -->
+                                <div class="col-md-6">
+                                    <label for="tipoMascota" class="form-label fw-bold">
+                                        <i class="fas fa-paw"></i> Tipo de Mascota:
+                                    </label>
+                                    <select class="form-select" id="tipoMascota" name="tipoMascota">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="Perro">Perro</option>
+                                        <option value="Gato">Gato</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+
+                                <!-- Mensaje -->
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label fw-bold">
+                                        <i class="fas fa-comment"></i> Mensaje:
+                                    </label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+
+                                <!-- Botón de envío -->
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-lg btn-primary px-5">
+                                        <i class="fas fa-paper-plane"></i> ENVIAR
+                                    </button>
+                                    <button type="reset" class="btn btn-lg btn-secondary px-5 ms-2">
+                                        <i class="fas fa-redo"></i> LIMPIAR
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,21 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - Club de Mascotas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/cargarComponentes.js" defer></script> <!-- Nuevo archivo JS -->
-    <title>Nosotros</title>
+    <script src="javascript/cargarComponentes.js" defer></script>
 </head>
 <body>
-    <header id="header"></header> <!-- El header se cargará aquí -->
+    <header id="header"></header>
 
-    <h1>QUIENES SOMOS..!</h1>
-    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nostrum provident tenetur, vero pariatur accusamus aut aspernatur esse, tempore dolores veritatis optio sit perferendis soluta libero. Odit cumque saepe ducimus?.
-    </P>
-    <section class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/H4JE6XDR6UE?si=VqVFr-HRcEMIDASe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <footer id="footer"></footer> <!-- El footer se cargará aquí -->
+    <div class="container my-5">
+        <h1 class="mb-5"><i class="fas fa-users"></i> ¡QUIÉNES SOMOS!</h1>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body p-4">
+                        <p class="lead text-justify">
+                            Somos un club dedicado al bienestar y cuidado de las mascotas, con más de 10 años de experiencia 
+                            en la creación de espacios seguros y amorosos para nuestros amigos peludos. Nuestra misión es 
+                            promover la adopción responsable, el cuidado adecuado y el respeto hacia todos los animales.
+                        </p>
+                        <p class="text-justify">
+                            Trabajamos en estrecha colaboración con veterinarios, entrenadores profesionales y voluntarios 
+                            apasionados para ofrecer los mejores servicios y productos para tu mascota. Creemos que cada 
+                            animal merece una vida llena de amor, cuidado y felicidad.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Misión y Visión -->
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">Nuestra Misión</h4>
+                                <p class="card-text">
+                                    Proporcionar un hogar temporal y permanente para mascotas necesitadas, 
+                                    promoviendo la adopción responsable y educando a la comunidad sobre el 
+                                    cuidado animal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <i class="fas fa-eye fa-3x text-primary mb-3"></i>
+                                <h4 class="card-title">Nuestra Visión</h4>
+                                <p class="card-text">
+                                    Ser el club de mascotas líder en la región, reconocido por nuestro 
+                                    compromiso con el bienestar animal y por crear una comunidad donde cada 
+                                    mascota tenga un hogar amoroso.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Valores -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header text-center py-3" style="background-color: rgb(206, 205, 255);">
+                        <h4 class="mb-0"><i class="fas fa-heart"></i> Nuestros Valores</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-1">Profesionalismo</h6>
+                                        <p class="mb-0">Excelencia en cada servicio</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header text-center py-3" style="background-color: rgb(206, 205, 255);">
+                        <h4 class="mb-0"><i class="fas fa-video"></i> Conoce más sobre nosotros</h4>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/H4JE6XDR6UE?si=VqVFr-HRcEMIDASe" 
+                                    title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estadísticas -->
+                <div class="row g-4 text-center mb-5">
+                    <div class="col-md-3 col-6">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <i class="fas fa-dog fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">500+</h3>
+                                <p class="text-muted mb-0">Mascotas Adoptadas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <i class="fas fa-users fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">1000+</h3>
+                                <p class="text-muted mb-0">Familias Felices</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <i class="fas fa-calendar fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">10+</h3>
+                                <p class="text-muted mb-0">Años de Experiencia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <i class="fas fa-award fa-2x text-primary mb-2"></i>
+                                <h3 class="mb-0">5</h3>
+                                <p class="text-muted mb-0">Premios Recibidos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-5">
+                    <h3 class="mb-3">¿Quieres ser parte de nuestra familia?</h3>
+                    <p class="lead mb-4">Únete a nosotros y ayuda a hacer la diferencia en la vida de nuestras mascotas</p>
+                    <a href="contacto.html" class="btn btn-lg btn-primary me-2">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                    <a href="mascota.html" class="btn btn-lg btn-outline-primary">
+                        <i class="fas fa-paw"></i> Ver Mascotas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html>success me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-1">Compromiso</h6>
+                                        <p class="mb-0">Dedicación total al bienestar animal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-1">Respeto</h6>
+                                        <p class="mb-0">Valoramos cada vida animal</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-success me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-1">Transparencia</h6>
+                                        <p class="mb-0">Honestidad en todas nuestras acciones</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-start">
+                                    <i class="fas fa-check-circle text-

@@ -1,46 +1,68 @@
-/*Encabezado*/
-div{
-    width: 940px; /*ancho*/
-    position: relative; /*margen en el encabezado*/
+/* ===================== ESTILOS GENERALES ===================== */
+body {
+    background-color: #f1f1f1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===================== HEADER Y NAVEGACIÓN ===================== */
+div {
+    width: 940px;
+    position: relative;
     margin: 0 auto;
 }
-header{
-    background-color: rgb(206, 205, 255); /*fondo del header*/
+
+header {
+    background-color: rgb(206, 205, 255);
     padding: 20px 0;
     margin: 0 0 20px;
 }
-nav{
+
+nav {
     position: absolute;
     top: 0px;
     right: 0;
 }
+
 nav li {
     display: inline;
     margin: 0 0 0 1px;
     padding: 5px;
 }
+
 nav a {
     text-transform: uppercase;
     color: rgba(1, 6, 10, 0.959);
     font-weight: bold;
-    font-size: 22 px;
+    font-size: 22px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
-nav a:hover{ /*modificar cuando el mouse pasa por un link del menu*/
+
+nav a:hover {
     color: blue;
-    text-decoration:underline;
+    text-decoration: underline;
 }
-/*nav a:visited{
-    color: #2e2e2e;
-    background-color:transparent;
-    text-decoration: none;
-}*/
-.logo{
+
+.logo {
     margin-left: -20%;
     width: 40px;
     height: 40px;
 }
-.mascota li{
+
+/* Estilos para navegación Bootstrap */
+.navbar-nav .nav-link {
+    color: rgba(1, 6, 10, 0.959) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: blue !important;
+}
+
+/* ===================== SECCIÓN DE MASCOTAS ===================== */
+.mascota li {
     display: inline-block;
     text-align: center;
     width: 30%;
@@ -49,82 +71,444 @@ nav a:hover{ /*modificar cuando el mouse pasa por un link del menu*/
     padding: 20px 18px;
     box-sizing: border-box;
 }
+
 .tm {
     width: 200px;
     height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
+
 .genero {
     font-size: 18px;
 }
+
 .edad {
     font-size: 20px;
     font-weight: bold;
     margin-top: 10px;
 }
-.pie{
+
+/* Tarjetas de mascotas con Bootstrap */
+.mascota-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.mascota-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.mascota-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.mascota-card .btn-primary {
+    background-color: rgb(150, 149, 255);
+    border-color: rgb(150, 149, 255);
+}
+
+.mascota-card .btn-primary:hover {
+    background-color: rgb(120, 119, 230);
+    border-color: rgb(120, 119, 230);
+}
+
+/* ===================== FOOTER ===================== */
+.pie {
     text-align: center;
     color: rgba(15, 15, 15, 0.808);
     font-size: 20px;
     margin: 20px;
     font-weight: bold;
 }
-footer{
-    text-align: center;
-    background-color: rgba(206, 205, 255); 
-    padding: 20px;
-}
-.giff{
-    width: 560px;
-    margin: 1em auto;
-    align-self:center;
 
+footer {
+    text-align: center;
+    background-color: rgba(206, 205, 255);
+    padding: 20px;
+    margin-top: 50px;
 }
-body{
-    background-color: #f1f1f1;
+
+/* Footer moderno */
+.footer-modern {
+    background: linear-gradient(135deg, rgb(206, 205, 255) 0%, rgb(180, 179, 255) 100%);
+    color: #333;
+    margin-top: 80px;
 }
-#Bienvenidos h2{ 
+
+.footer-section h3 {
+    color: #1a1a1a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #5858ff;
+}
+
+.location-link {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.location-link:hover {
+    transform: scale(1.1);
+}
+
+.footer-legal {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===================== SECCIÓN DE BIENVENIDA ===================== */
+.giff {
+    width: 100%;
+    max-width: 560px;
+    margin: 1em auto;
+    display: block;
+}
+
+#Bienvenidos h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
 }
 
-#Bienvenidos p{ 
+#Bienvenidos p {
     text-align: justify;
     padding: 20px;
-    box-shadow: 0px 2px 2px 3px rgba(118, 117, 117, 0.5) ;
-    margin-left: 10px; 
-    margin-right: 10p; 
-    font-size: 23px; 
-    line-height: 1.7em; 
+    box-shadow: 0px 2px 2px 3px rgba(118, 117, 117, 0.5);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 23px;
+    line-height: 1.7em;
 }
-#blog .contenedor{
+
+/* ===================== BLOG SECTION ===================== */
+#blog .contenedor {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-#blog img{ 
+
+#blog img {
     width: 230px;
     height: 220px;
     box-shadow: 0px 0px 2px 5px rgba(126, 146, 95, 0.5);
+    border-radius: 10px;
 }
 
-#blog article{
+#blog article {
     margin: 20px;
 }
- #blog h3{
+
+#blog h3 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 20px;
- }
- #blog h4{
+}
+
+#blog h4 {
     text-align: center;
     padding: auto;
     margin-top: 10px;
- }
- /*Alinear texto de nosotros.html*/
- h1{
+}
+
+/* Tarjetas hover del blog */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.hover-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===================== PÁGINAS GENERALES ===================== */
+h1 {
     text-align: center;
- }
- p{
+    color: #333;
+    font-weight: 600;
+    margin: 30px 0;
+}
+
+p {
     text-align: justify;
     font-size: 24px;
- }
+}
+
+/* ===================== VIDEO SECTION ===================== */
+.video {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.video iframe {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================== TABLA DE PRODUCTOS ===================== */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table tr:first-child td {
+    background-color: rgb(206, 205, 255);
+    font-weight: bold;
+    color: #333;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ===================== LOGIN STYLES ===================== */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgb(251, 249, 247);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(66, 53, 53, 0.2);
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 80px auto;
+}
+
+.login-header {
+    margin-bottom: 20px;
+}
+
+.user-icon {
+    font-size: 50px;
+    color: white;
+    background: linear-gradient(135deg, rgb(206, 205, 255) 0%, rgb(150, 149, 255) 100%);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(150, 149, 255, 0.4);
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    z-index: 10;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: rgb(150, 149, 255);
+    box-shadow: 0 0 5px rgba(150, 149, 255, 0.3);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    color: rgb(120, 119, 230);
+}
+
+.options a {
+    color: rgb(120, 119, 230);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    text-decoration: underline;
+    color: rgb(100, 99, 210);
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: linear-gradient(135deg, rgb(150, 149, 255) 0%, rgb(120, 119, 230) 100%);
+    color: white;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(150, 149, 255, 0.4);
+}
+
+.register-link {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-link a {
+    color: rgb(120, 119, 230);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* ===================== FORMULARIO DE CONTACTO ===================== */
+.card-header {
+    background: linear-gradient(135deg, rgb(206, 205, 255) 0%, rgb(180, 179, 255) 100%) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, rgb(150, 149, 255) 0%, rgb(120, 119, 230) 100%);
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(150, 149, 255, 0.4);
+    background: linear-gradient(135deg, rgb(130, 129, 240) 0%, rgb(100, 99, 210) 100%);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: rgb(150, 149, 255);
+    box-shadow: 0 0 0 0.2rem rgba(150, 149, 255, 0.25);
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 768px) {
+    div {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    #Bienvenidos p {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .login-container {
+        width: 90%;
+        padding: 30px 20px;
+        margin: 50px auto;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    nav a {
+        font-size: 16px;
+    }
+
+    #Bienvenidos p {
+        font-size: 16px;
+    }
+
+    .user-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,20 @@
+/*Alinear texto de nosotros.html*/
+h1{
+    text-align: center;
+ }
+ p{
+    text-align: justify;
+    font-size: 24px;
+ }
+ .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+}
+.mapa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em auto;
+}

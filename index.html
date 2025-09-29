@@ -3,48 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Mascotas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/cargarComponentes.js" defer></script> <!-- Nuevo archivo JS -->
-    <script src="javascript/edad.js" defer></script>
-    <title>Tienda de mascotas</title>
+    <script src="javascript/cargarComponentes.js" defer></script>
 </head>
 <body>
-    <header id="header"></header> <!-- El header se cargará aquí -->
+    <header id="header"></header>
 
-    <section class="giff">
-        <img src="imagen/Panda.gif" alt="Panda">
-    </section>
-    <section id="Bienvenidos">
-        <h2>Bienvenido a nuestra club de mascota</h2>
-        <p>Somos un club de mascota que busca contribuir activamente con el mejoramiento continuo en la calidad de vida 
-            de estos seres maravillosos y para lograrlo es necesario la colaboracion de todos, por esta razon nuestro club
-            busca apoyo de manera incesante en las empresas publicas y privadas que deseen contribuir de forma activa a 
-            tan grandiosa labor. 
-        </p>
-    </section>
-    <section id="blog">
-        <h3>Lo último de nuestra tienda</h3>
-        <div class="contenedor">
-            <article>
-                <img src="imagen/perrito corriendo.jpg" alt="">
-                <h4>Escoge tu mascota perfecta</h4>
-            </article>
-            <article>
-                <img src="imagen/Perro en la playa.jpg" alt="">
-                <h4>Los animales necesitan cariño</h4>
-            </article>
-            <article>
-                <img src="imagen/gato.jpg" alt="">
-                <h4>Camina con tu mascota</h4>
-            </article>
-            <article>
-                <img src="imagen/Perro y Gato.jpg" alt="">
-                <h4>¡Si puedieran hablar!</h4>
-            </article>
+    <!-- Hero Section con el GIF -->
+    <section class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <img src="imagen/Panda.gif" alt="Panda" class="img-fluid rounded shadow">
+            </div>
         </div>
     </section>
-    
 
-    <footer id="footer"></footer> <!-- El footer se cargará aquí -->
+    <!-- Sección de Bienvenida -->
+    <section id="Bienvenidos" class="container my-5">
+        <h2 class="text-center mb-4">Bienvenido a nuestro club de mascota</h2>
+        <div class="row">
+            <div class="col-12">
+                <p class="lead text-justify p-4 bg-white rounded shadow-sm">
+                    Somos un club de mascota que busca contribuir activamente con el mejoramiento continuo en la calidad de vida 
+                    de estos seres maravillosos y para lograrlo es necesario la colaboración de todos, por esta razón nuestro club
+                    busca apoyo de manera incesante en las empresas públicas y privadas que deseen contribuir de forma activa a 
+                    tan grandiosa labor. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="container my-5">
+        <h3 class="text-center mb-5">Lo último de nuestra tienda</h3>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <article class="card h-100 shadow-sm hover-card">
+                    <img src="imagen/perrito corriendo.jpg" class="card-img-top" alt="Perrito corriendo">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Escoge tu mascota perfecta</h5>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <article class="card h-100 shadow-sm hover-card">
+                    <img src="imagen/Perro en la playa.jpg" class="card-img-top" alt="Perro en la playa">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Los animales necesitan cariño</h5>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <article class="card h-100 shadow-sm hover-card">
+                    <img src="imagen/gato.jpg" class="card-img-top" alt="Gato">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Camina con tu mascota</h5>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <article class="card h-100 shadow-sm hover-card">
+                    <img src="imagen/Perro y Gato.jpg" class="card-img-top" alt="Perro y Gato">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">¡Si pudieran hablar!</h5>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

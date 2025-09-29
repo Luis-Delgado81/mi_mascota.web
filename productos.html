@@ -1,43 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Club de Mascotas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <script src="javascript/cargarComponentes.js" defer></script> <!-- Nuevo archivo JS -->
-    <title>Productos</title>
+    <script src="javascript/cargarComponentes.js" defer></script>
 </head>
 <body>
-    <header id="header"></header> <!-- El header se cargará aquí -->
+    <header id="header"></header>
 
-    <h1>NUESTRO PRODUCTOS</h1>
-    <TAble border ="1" >
-        <tr>
-            <td>NOMBRE</td>
-            <td>MARCA</td>
-            <td>PRECIO</td>
-        </tr>
-        <tr>
-            <td>Mouse</td>
-            <td>Abc</td>
-            <td>$ 25000</td>
-        </tr>
-        <tr>
-            <td>Teclado</td>
-            <td>Logic</td>
-            <td>$ 30000</td>
-        </tr>
-        <tr>
-            <td>Monitor</td>
-            <td>AOC</td>
-            <td>$ 125000</td>
-        </tr>
-        <tr>
-            <td>Parlante</td>
-            <td>Genius</td>
-            <td>$ 25000</td>
-        </tr>
-    </TAble>
-    <footer id="footer"></footer> <!-- El footer se cargará aquí -->
+    <div class="container my-5">
+        <h1 class="mb-5"><i class="fas fa-shopping-cart"></i> Nuestros Productos</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered shadow-sm">
+                        <thead class="table-header">
+                            <tr>
+                                <th scope="col"><i class="fas fa-box"></i> NOMBRE</th>
+                                <th scope="col"><i class="fas fa-tag"></i> MARCA</th>
+                                <th scope="col"><i class="fas fa-dollar-sign"></i> PRECIO</th>
+                                <th scope="col"><i class="fas fa-info-circle"></i> ACCIÓN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alimento para Perros Premium</td>
+                                <td>Dog Chow</td>
+                                <td>$ 85,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Alimento para Gatos</td>
+                                <td>Cat Chow</td>
+                                <td>$ 75,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Collar Ajustable</td>
+                                <td>PetSafe</td>
+                                <td>$ 35,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Juguete Interactivo</td>
+                                <td>Kong</td>
+                                <td>$ 45,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cama para Mascotas</td>
+                                <td>ComfyPet</td>
+                                <td>$ 125,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Shampoo Antiparasitario</td>
+                                <td>FleaAway</td>
+                                <td>$ 28,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Transportadora Mediana</td>
+                                <td>PetCargo</td>
+                                <td>$ 95,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Correa Retráctil</td>
+                                <td>Flexi</td>
+                                <td>$ 55,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fas fa-shopping-bag"></i> Comprar
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de categorías -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-bone fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Alimentos</h5>
+                        <p class="card-text">Nutrición de calidad para tus mascotas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-paw fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Accesorios</h5>
+                        <p class="card-text">Todo lo que necesitas para tu mascota</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <i class="fas fa-heartbeat fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Salud</h5>
+                        <p class="card-text">Productos para el bienestar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
